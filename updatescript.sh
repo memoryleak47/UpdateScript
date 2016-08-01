@@ -35,6 +35,15 @@ function _mkdir()
 
 _install git
 _install vim
+_install tree
+_install wireshark
+_install nmap
+# _install zenmap
+# _install curl
+# _install wget
+# _install python3-tk
+# _install libsfml-dev
+# _install libxtst-dev
 
 _build telegram ppa:atareao/telegram
 _build tor-browser ppa:webupd8team/tor-browser
@@ -58,5 +67,5 @@ _mkdir "$HOME/projects/learn"
 
 _mkdir "$HOME/apps"
 
-
-echo -e "\nLoading Firefox Plugins..."
+echo -e "\nLoading Firefox Plugins... TODO"
+echo -e "Setting up Terminal Profiles... TODO"
