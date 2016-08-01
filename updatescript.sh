@@ -22,7 +22,7 @@ function _build()
 	else
 		sudo add-apt-repository -y $2
 		sudo apt-get update
-		sudo apt-get install telegram
+		sudo apt-get install $1
 	fi
 }
 
