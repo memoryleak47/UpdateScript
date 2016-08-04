@@ -3,20 +3,14 @@
 function _install()
 {
 	echo -e "\nInstalling $1..."
-	if [ "$(dpkg -l "$1")" ]; then
-		if [ "$(apt list --upgradeable | grep $1)" ]; then
-			sudo apt upgrade "$1"
-		fi
-	else
-		sudo apt install "$1"
-	fi
+	sudo apt-get install "$1"
 }
 
 function _build()
 {
 	echo -e "\nInstalling $1..."
 	if [ "$(dpkg -l | grep "$1")" ]; then
-		if [ "$(apt list --upgradeable | grep $1)" ]; then
+		if [ "$(dpkg --status $1 | grep "^Status: install ok installed$")" ]; then
 			sudo apt-get upgrade $1
 		fi
 	else
