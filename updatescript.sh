@@ -32,6 +32,7 @@ _install vim
 _install tree
 _install wireshark
 _install nmap
+_install terminator
 # _install zenmap
 # _install curl
 # _install wget
@@ -44,7 +45,7 @@ _build tor-browser ppa:webupd8team/tor-browser
 
 echo -e "\nSetting up launcher..."
 dconf write '/org/compiz/profiles/unity/plugins/unityshell/icon-size' '24'
-dconf write '/com/canonical/unity/launcher/favorites' "['application://org.gnome.Nautilus.desktop', 'application://gnome-terminal.desktop', 'application://firefox.desktop', 'unity://running-apps', 'unity://expo-icon', 'unity://devices']"
+dconf write '/com/canonical/unity/launcher/favorites' "['application://org.gnome.Nautilus.desktop', 'application://terminator.desktop', 'application://firefox.desktop', 'unity://running-apps', 'unity://expo-icon', 'unity://devices']"
 
 echo -e "\nSetting up Workspaces"
 dconf write '/org/compiz/profiles/unity/plugins/core/hsize' '2'
