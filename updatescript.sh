@@ -33,11 +33,11 @@ _install tree
 _install wireshark
 _install nmap
 _install terminator
-# _install zenmap
-# _install curl
-# _install wget
+_install zenmap
+_install curl
+_install wget
 # _install python3-tk
-# _install libsfml-dev
+_install libsfml-dev
 # _install libxtst-dev
 
 _build telegram ppa:atareao/telegram
@@ -50,6 +50,18 @@ dconf write '/com/canonical/unity/launcher/favorites' "['application://org.gnome
 echo -e "\nSetting up Workspaces"
 dconf write '/org/compiz/profiles/unity/plugins/core/hsize' '2'
 dconf write '/org/compiz/profiles/unity/plugins/core/vsize' '2'
+
+dconf write '/org/gnome/desktop/wm/keybindings/switch-to-workspace-left' "['<Control><Alt>H']"
+dconf write '/org/gnome/desktop/wm/keybindings/switch-to-workspace-down' "['<Control><Alt>J']"
+dconf write '/org/gnome/desktop/wm/keybindings/switch-to-workspace-right' "['<Control><Alt>L']"
+dconf write '/org/gnome/desktop/wm/keybindings/switch-to-workspace-up' "['<Control><Alt>K']"
+
+dconf write '/org/gnome/desktop/wm/keybindings/move-to-workspace-left' "['<Control><Shift><Alt>H']"
+dconf write '/org/gnome/desktop/wm/keybindings/move-to-workspace-down' "['<Control><Shift><Alt>J']"
+dconf write '/org/gnome/desktop/wm/keybindings/move-to-workspace-right' "['<Control><Shift><Alt>L']"
+dconf write '/org/gnome/desktop/wm/keybindings/move-to-workspace-up' "['<Control><Shift><Alt>K']"
+
+dconf write '/org/gnome/settings-daemon/plugins/media-keys/screensaver' "'disabled'" # Also used <Control><Alt>L
 
 echo -e "\nSetting up file system"
 _mkdir "$HOME/projects"
